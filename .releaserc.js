@@ -5,14 +5,11 @@ const config = require('@lobehub/lint').semanticRelease;
 config.plugins = config.plugins.filter((plugin) => plugin !== '@semantic-release/npm');
 
 // Add GitHub only if required
-config.plugins.push(
-  [
-    '@semantic-release/exec',
-    {
-      prepareCmd: 'npm run workflow:changelog',
-    },
-  ],
-  '@semantic-release/github', // Ensure GitHub releases plugin is here
-);
+config.plugins.push([
+  '@semantic-release/exec',
+  {
+    prepareCmd: 'npm run workflow:changelog',
+  },
+]);
 
 module.exports = config;
