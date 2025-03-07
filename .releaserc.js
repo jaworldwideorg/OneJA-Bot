@@ -12,4 +12,7 @@ config.plugins.push([
   },
 ]);
 
+// Override repository URL
+config.repositoryUrl = 'https://github.com/jaworldwideorg/OneJA-Bot/';
+
 module.exports = config;
