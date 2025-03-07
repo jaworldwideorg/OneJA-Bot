@@ -2,6 +2,40 @@
 
 # Changelog
 
+## [Version 1.17.0](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.16.8...v1.17.0)
+
+<sup>Released on **2025-03-07**</sup>
+
+#### ✨ Features
+
+- **misc**: Support Anthropic Context Caching.
+
+#### 💄 Styles
+
+- **misc**: Add Gemini 2.0 Flash model variations, add QwQ models.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support Anthropic Context Caching, closes [#6704](https://github.com/jaworldwideorg/OneJA-Bot/issues/6704) ([471e3ed](https://github.com/jaworldwideorg/OneJA-Bot/commit/471e3ed))
+
+#### Styles
+
+- **misc**: Add Gemini 2.0 Flash model variations, closes [#6679](https://github.com/jaworldwideorg/OneJA-Bot/issues/6679) ([d5a8fcb](https://github.com/jaworldwideorg/OneJA-Bot/commit/d5a8fcb))
+- **misc**: Add QwQ models, closes [#6770](https://github.com/jaworldwideorg/OneJA-Bot/issues/6770) ([cd30fcc](https://github.com/jaworldwideorg/OneJA-Bot/commit/cd30fcc))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.16.8](https://github.com/jaworldwideorg/OneJA-Bot//compare/v1.16.7...v1.16.8)
 
 <sup>Released on **2025-03-07**</sup>
