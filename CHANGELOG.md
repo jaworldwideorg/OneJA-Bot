@@ -2,23 +2,22 @@
 
 # Changelog
 
-### [Version 1.16.7](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.16.6...v1.16.7)
+### [Version 1.68.10](https://github.com/lobehub/lobe-chat/compare/v1.68.9...v1.68.10)
 
 <sup>Released on **2025-03-06**</sup>
 
-#### 💄 Styles
+#### 🐛 Bug Fixes
 
-- **misc**: Add epub file chunk split support, improve openrouter models info.
+- **misc**: Fix litellm streaming usage and refactor the usage chunk.
 
 <br/>
 
 <details>
 <summary><kbd>Improvements and Fixes</kbd></summary>
 
-#### Styles
+#### What's fixed
 
-- **misc**: Add epub file chunk split support, closes [#6317](https://github.com/jaworldwideorg/OneJA-Bot/issues/6317) ([a79ab7a](https://github.com/jaworldwideorg/OneJA-Bot/commit/a79ab7a))
-- **misc**: Improve openrouter models info, closes [#6708](https://github.com/jaworldwideorg/OneJA-Bot/issues/6708) ([5693e68](https://github.com/jaworldwideorg/OneJA-Bot/commit/5693e68))
+- **misc**: Fix litellm streaming usage and refactor the usage chunk, closes [#6734](https://github.com/lobehub/lobe-chat/issues/6734) ([9f09952](https://github.com/lobehub/lobe-chat/commit/9f09952))
 
 </details>
 
