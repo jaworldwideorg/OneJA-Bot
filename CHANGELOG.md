@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.16.8](https://github.com/jaworldwideorg/OneJA-Bot//compare/v1.16.7...v1.16.8)
+
+<sup>Released on **2025-03-07**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix litellm streaming usage and refactor the usage chunk.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix litellm streaming usage and refactor the usage chunk, closes [#6734](https://github.com/jaworldwideorg/OneJA-Bot//issues/6734) ([9f09952](https://github.com/jaworldwideorg/OneJA-Bot//commit/9f09952))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.68.10](https://github.com/lobehub/lobe-chat/compare/v1.68.9...v1.68.10)
 
 <sup>Released on **2025-03-06**</sup>
