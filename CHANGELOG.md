@@ -2,6 +2,48 @@
 
 # Changelog
 
+### [Version 1.17.1](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.17.0...v1.17.1)
+
+<sup>Released on **2025-03-09**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor the agent runtime implement.
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix mistral can not chat.
+
+#### 💄 Styles
+
+- **misc**: Add login ui for next-auth, Add Qwen QwQ model.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor the agent runtime implement, closes [#6784](https://github.com/jaworldwideorg/OneJA-Bot/issues/6784) ([14a9874](https://github.com/jaworldwideorg/OneJA-Bot/commit/14a9874))
+
+#### What's fixed
+
+- **misc**: Fix mistral can not chat, closes [#6828](https://github.com/jaworldwideorg/OneJA-Bot/issues/6828) ([00cba71](https://github.com/jaworldwideorg/OneJA-Bot/commit/00cba71))
+
+#### Styles
+
+- **misc**: Add login ui for next-auth, closes [#6434](https://github.com/jaworldwideorg/OneJA-Bot/issues/6434) ([541f275](https://github.com/jaworldwideorg/OneJA-Bot/commit/541f275))
+- **misc**: Add Qwen QwQ model, closes [#6783](https://github.com/jaworldwideorg/OneJA-Bot/issues/6783) ([3d3c2ce](https://github.com/jaworldwideorg/OneJA-Bot/commit/3d3c2ce))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.69.4](https://github.com/lobehub/lobe-chat/compare/v1.69.3...v1.69.4)
 
 <sup>Released on **2025-03-09**</sup>
