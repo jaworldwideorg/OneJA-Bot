@@ -16,7 +16,8 @@ const novitaChatModels: AIChatModelCard[] = [
   },
   {
     contextWindowTokens: 16_384,
-    description: 'Llama 3.1 8B Instruct 是 Meta 推出的最新版本，优化了高质量对话场景，表现优于许多领先的闭源模型。',
+    description:
+      'Llama 3.1 8B Instruct 是 Meta 推出的最新版本，优化了高质量对话场景，表现优于许多领先的闭源模型。',
     displayName: 'Llama 3.1 8B Instruct',
     id: 'meta-llama/llama-3.1-8b-instruct',
     pricing: {
@@ -27,7 +28,8 @@ const novitaChatModels: AIChatModelCard[] = [
   },
   {
     contextWindowTokens: 32_768,
-    description: 'Llama 3.1 70B Instruct 专为高质量对话而设计，在人类评估中表现突出，特别适合高交互场景。',
+    description:
+      'Llama 3.1 70B Instruct 专为高质量对话而设计，在人类评估中表现突出，特别适合高交互场景。',
     displayName: 'Llama 3.1 70B Instruct',
     id: 'meta-llama/llama-3.1-70b-instruct',
     pricing: {
@@ -147,6 +149,29 @@ const novitaChatModels: AIChatModelCard[] = [
     pricing: {
       input: 0.06,
       output: 0.06,
+    },
+    type: 'chat',
+  },
+  {
+    contextWindowTokens: 64_000,
+    displayName: 'Deepseek V3 Turbo',
+    id: 'deepseek/deepseek-v3-turbo',
+    pricing: {
+      input: 0.4,
+      output: 1.3,
+    },
+    type: 'chat',
+  },
+  {
+    abilities: {
+      reasoning: true,
+    },
+    contextWindowTokens: 64_000,
+    displayName: 'Deepseek R1 Turbo',
+    id: 'deepseek/deepseek-r1-turbo',
+    pricing: {
+      input: 0.7,
+      output: 2.5,
     },
     type: 'chat',
   },
@@ -375,6 +400,19 @@ const novitaChatModels: AIChatModelCard[] = [
     pricing: {
       input: 0.054,
       output: 0.054,
+    },
+    type: 'chat',
+  },
+  {
+    abilities: {
+      reasoning: true,
+    },
+    contextWindowTokens: 32_768,
+    displayName: 'QwQ 32B',
+    id: 'qwen/qwq-32b',
+    pricing: {
+      input: 0.18,
+      output: 0.2,
     },
     type: 'chat',
   },

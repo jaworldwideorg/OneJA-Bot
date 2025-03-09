@@ -63,7 +63,7 @@ const siliconcloudChatModels: AIChatModelCard[] = [
       'DeepSeek-V3 是一款拥有 6710 亿参数的混合专家（MoE）语言模型，采用多头潜在注意力（MLA）和 DeepSeekMoE 架构，结合无辅助损失的负载平衡策略，优化推理和训练效率。通过在 14.8 万亿高质量tokens上预训练，并进行监督微调和强化学习，DeepSeek-V3 在性能上超越其他开源模型，接近领先闭源模型。',
     displayName: 'DeepSeek V3 (Pro)',
     id: 'Pro/deepseek-ai/DeepSeek-V3',
-    pricing: { 
+    pricing: {
       currency: 'CNY',
       input: 2,
       output: 8,
@@ -72,103 +72,103 @@ const siliconcloudChatModels: AIChatModelCard[] = [
   },
   {
     abilities: {
-      reasoning: true
+      reasoning: true,
     },
     contextWindowTokens: 32_768,
-    description: 
-      "DeepSeek-R1-Distill-Llama-70B 是基于 Llama-3.3-70B-Instruct 经过蒸馏训练得到的模型。该模型是 DeepSeek-R1 系列的一部分，通过使用 DeepSeek-R1 生成的样本进行微调，在数学、编程和推理等多个领域展现出优秀的性能。模型在 AIME 2024、MATH-500、GPQA Diamond 等多个基准测试中都取得了优异的成绩，显示出强大的推理能力。",
-    displayName: "DeepSeek R1 Distill Llama 70B",
+    description:
+      'DeepSeek-R1-Distill-Llama-70B 是基于 Llama-3.3-70B-Instruct 经过蒸馏训练得到的模型。该模型是 DeepSeek-R1 系列的一部分，通过使用 DeepSeek-R1 生成的样本进行微调，在数学、编程和推理等多个领域展现出优秀的性能。模型在 AIME 2024、MATH-500、GPQA Diamond 等多个基准测试中都取得了优异的成绩，显示出强大的推理能力。',
+    displayName: 'DeepSeek R1 Distill Llama 70B',
     enabled: true,
-    id: "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+    id: 'deepseek-ai/DeepSeek-R1-Distill-Llama-70B',
     pricing: {
-      currency: "CNY",
+      currency: 'CNY',
       input: 4.13,
-      output: 4.13  
+      output: 4.13,
     },
-    type: "chat"
+    type: 'chat',
   },
   {
     abilities: {
-      reasoning: true
+      reasoning: true,
     },
     contextWindowTokens: 32_768,
-    description: 
-      "DeepSeek-R1-Distill-Qwen-32B 是基于 Qwen2.5-32B 通过知识蒸馏得到的模型。该模型使用 DeepSeek-R1 生成的 80 万个精选样本进行微调，在数学、编程和推理等多个领域展现出卓越的性能。在 AIME 2024、MATH-500、GPQA Diamond 等多个基准测试中都取得了优异成绩，其中在 MATH-500 上达到了 94.3% 的准确率，展现出强大的数学推理能力。",
-    displayName: "DeepSeek R1 Distill Qwen 32B",
+    description:
+      'DeepSeek-R1-Distill-Qwen-32B 是基于 Qwen2.5-32B 通过知识蒸馏得到的模型。该模型使用 DeepSeek-R1 生成的 80 万个精选样本进行微调，在数学、编程和推理等多个领域展现出卓越的性能。在 AIME 2024、MATH-500、GPQA Diamond 等多个基准测试中都取得了优异成绩，其中在 MATH-500 上达到了 94.3% 的准确率，展现出强大的数学推理能力。',
+    displayName: 'DeepSeek R1 Distill Qwen 32B',
     enabled: true,
-    id: "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    id: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B',
     pricing: {
-      currency: "CNY",
+      currency: 'CNY',
       input: 1.26,
-      output: 1.26
+      output: 1.26,
     },
-    type: "chat"
+    type: 'chat',
   },
   {
     abilities: {
-      reasoning: true
+      reasoning: true,
     },
     contextWindowTokens: 32_768,
-    description: 
-      "DeepSeek-R1-Distill-Qwen-14B 是基于 Qwen2.5-14B 通过知识蒸馏得到的模型。该模型使用 DeepSeek-R1 生成的 80 万个精选样本进行微调，展现出优秀的推理能力。在多个基准测试中表现出色，其中在 MATH-500 上达到了 93.9% 的准确率，在 AIME 2024 上达到了 69.7% 的通过率，在 CodeForces 上获得了 1481 的评分，显示出在数学和编程领域的强大实力。",
-    displayName: "DeepSeek R1 Distill Qwen 14B",
-    id: "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+    description:
+      'DeepSeek-R1-Distill-Qwen-14B 是基于 Qwen2.5-14B 通过知识蒸馏得到的模型。该模型使用 DeepSeek-R1 生成的 80 万个精选样本进行微调，展现出优秀的推理能力。在多个基准测试中表现出色，其中在 MATH-500 上达到了 93.9% 的准确率，在 AIME 2024 上达到了 69.7% 的通过率，在 CodeForces 上获得了 1481 的评分，显示出在数学和编程领域的强大实力。',
+    displayName: 'DeepSeek R1 Distill Qwen 14B',
+    id: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-14B',
     pricing: {
-      currency: "CNY",
+      currency: 'CNY',
       input: 0.7,
-      output: 0.7
+      output: 0.7,
     },
-    type: "chat"
+    type: 'chat',
   },
   {
     abilities: {
-      reasoning: true
+      reasoning: true,
     },
     contextWindowTokens: 32_768,
-    description: 
-      "DeepSeek-R1-Distill-Llama-8B 是基于 Llama-3.1-8B 开发的蒸馏模型。该模型使用 DeepSeek-R1 生成的样本进行微调，展现出优秀的推理能力。在多个基准测试中表现不俗，其中在 MATH-500 上达到了 89.1% 的准确率，在 AIME 2024 上达到了 50.4% 的通过率，在 CodeForces 上获得了 1205 的评分，作为 8B 规模的模型展示了较强的数学和编程能力。",
-    displayName: "DeepSeek R1 Distill Llama 8B (Free)",
+    description:
+      'DeepSeek-R1-Distill-Llama-8B 是基于 Llama-3.1-8B 开发的蒸馏模型。该模型使用 DeepSeek-R1 生成的样本进行微调，展现出优秀的推理能力。在多个基准测试中表现不俗，其中在 MATH-500 上达到了 89.1% 的准确率，在 AIME 2024 上达到了 50.4% 的通过率，在 CodeForces 上获得了 1205 的评分，作为 8B 规模的模型展示了较强的数学和编程能力。',
+    displayName: 'DeepSeek R1 Distill Llama 8B (Free)',
     enabled: true,
-    id: "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    id: 'deepseek-ai/DeepSeek-R1-Distill-Llama-8B',
     pricing: {
-      currency: "CNY",
+      currency: 'CNY',
       input: 0,
-      output: 0
+      output: 0,
     },
-    type: "chat"
+    type: 'chat',
   },
   {
     abilities: {
-      reasoning: true
+      reasoning: true,
     },
     contextWindowTokens: 32_768,
-    description: 
-      "DeepSeek-R1-Distill-Qwen-7B 是基于 Qwen2.5-Math-7B 通过知识蒸馏得到的模型。该模型使用 DeepSeek-R1 生成的 80 万个精选样本进行微调，展现出优秀的推理能力。在多个基准测试中表现出色，其中在 MATH-500 上达到了 92.8% 的准确率，在 AIME 2024 上达到了 55.5% 的通过率，在 CodeForces 上获得了 1189 的评分，作为 7B 规模的模型展示了较强的数学和编程能力。",
-    displayName: "DeepSeek R1 Distill Qwen 7B (Free)",
+    description:
+      'DeepSeek-R1-Distill-Qwen-7B 是基于 Qwen2.5-Math-7B 通过知识蒸馏得到的模型。该模型使用 DeepSeek-R1 生成的 80 万个精选样本进行微调，展现出优秀的推理能力。在多个基准测试中表现出色，其中在 MATH-500 上达到了 92.8% 的准确率，在 AIME 2024 上达到了 55.5% 的通过率，在 CodeForces 上获得了 1189 的评分，作为 7B 规模的模型展示了较强的数学和编程能力。',
+    displayName: 'DeepSeek R1 Distill Qwen 7B (Free)',
     enabled: true,
-    id: "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    id: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B',
     pricing: {
-      currency: "CNY",
+      currency: 'CNY',
       input: 0,
-      output: 0
+      output: 0,
     },
-    type: "chat",
+    type: 'chat',
   },
   {
     abilities: {
-      reasoning: true
+      reasoning: true,
     },
     contextWindowTokens: 32_768,
-    description: 
-      "DeepSeek-R1-Distill-Qwen-1.5B 是基于 Qwen2.5-Math-1.5B 通过知识蒸馏得到的模型。该模型使用 DeepSeek-R1 生成的 80 万个精选样本进行微调，在多个基准测试中展现出不错的性能。作为一个轻量级模型，在 MATH-500 上达到了 83.9% 的准确率，在 AIME 2024 上达到了 28.9% 的通过率，在 CodeForces 上获得了 954 的评分，显示出超出其参数规模的推理能力。",
-    displayName: "DeepSeek-R1-Distill-Qwen-1.5B (Free)",
-    id: "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    description:
+      'DeepSeek-R1-Distill-Qwen-1.5B 是基于 Qwen2.5-Math-1.5B 通过知识蒸馏得到的模型。该模型使用 DeepSeek-R1 生成的 80 万个精选样本进行微调，在多个基准测试中展现出不错的性能。作为一个轻量级模型，在 MATH-500 上达到了 83.9% 的准确率，在 AIME 2024 上达到了 28.9% 的通过率，在 CodeForces 上获得了 954 的评分，显示出超出其参数规模的推理能力。',
+    displayName: 'DeepSeek-R1-Distill-Qwen-1.5B (Free)',
+    id: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B',
     pricing: {
-      currency: "CNY",
+      currency: 'CNY',
       input: 0,
-      output: 0
+      output: 0,
     },
-    type: "chat"
+    type: 'chat',
   },
   {
     abilities: {
@@ -226,9 +226,25 @@ const siliconcloudChatModels: AIChatModelCard[] = [
     },
     contextWindowTokens: 32_768,
     description:
-      'QwQ-32B-Preview是Qwen 最新的实验性研究模型，专注于提升AI推理能力。通过探索语言混合、递归推理等复杂机制，主要优势包括强大的推理分析能力、数学和编程能力。与此同时，也存在语言切换问题、推理循环、安全性考虑、其他能力方面的差异。',
-    displayName: 'QwQ 32B Preview',
+      'QwQ 是 Qwen 系列的推理模型。与传统的指令调优模型相比，QwQ 具备思考和推理能力，能够在下游任务中实现显著增强的性能，尤其是在解决困难问题方面。QwQ-32B 是中型推理模型，能够在与最先进的推理模型（如 DeepSeek-R1、o1-mini）的对比中取得有竞争力的性能。该模型采用 RoPE、SwiGLU、RMSNorm 和 Attention QKV bias 等技术，具有 64 层网络结构和 40 个 Q 注意力头（GQA 架构中 KV 为 8 个）。',
+    displayName: 'QwQ 32B',
     enabled: true,
+    id: 'Qwen/QwQ-32B',
+    pricing: {
+      currency: 'CNY',
+      input: 1,
+      output: 4,
+    },
+    type: 'chat',
+  },
+  {
+    abilities: {
+      reasoning: true,
+    },
+    contextWindowTokens: 32_768,
+    description:
+      'QwQ-32B-Preview 是 Qwen 最新的实验性研究模型，专注于提升AI推理能力。通过探索语言混合、递归推理等复杂机制，主要优势包括强大的推理分析能力、数学和编程能力。与此同时，也存在语言切换问题、推理循环、安全性考虑、其他能力方面的差异。',
+    displayName: 'QwQ 32B Preview',
     id: 'Qwen/QwQ-32B-Preview',
     pricing: {
       currency: 'CNY',
