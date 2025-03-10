@@ -2,39 +2,124 @@
 
 # Changelog
 
-### [Version 1.17.1](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.17.0...v1.17.1)
+### [Version 1.70.2](https://github.com/lobehub/lobe-chat/compare/v1.70.1...v1.70.2)
 
-<sup>Released on **2025-03-09**</sup>
-
-#### ♻ Code Refactoring
-
-- **misc**: Refactor the agent runtime implement.
+<sup>Released on **2025-03-10**</sup>
 
 #### 🐛 Bug Fixes
 
-- **misc**: Fix mistral can not chat.
-
-#### 💄 Styles
-
-- **misc**: Add login ui for next-auth, Add Qwen QwQ model.
+- **misc**: Update cvpr cvf url rules.
 
 <br/>
 
 <details>
 <summary><kbd>Improvements and Fixes</kbd></summary>
 
-#### Code refactoring
+#### What's fixed
 
-- **misc**: Refactor the agent runtime implement, closes [#6784](https://github.com/jaworldwideorg/OneJA-Bot/issues/6784) ([14a9874](https://github.com/jaworldwideorg/OneJA-Bot/commit/14a9874))
+- **misc**: Update cvpr cvf url rules, closes [#6860](https://github.com/lobehub/lobe-chat/issues/6860) ([c299067](https://github.com/lobehub/lobe-chat/commit/c299067))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.70.1](https://github.com/lobehub/lobe-chat/compare/v1.70.0...v1.70.1)
+
+<sup>Released on **2025-03-10**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix anthropic max tokens.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
 
 #### What's fixed
 
-- **misc**: Fix mistral can not chat, closes [#6828](https://github.com/jaworldwideorg/OneJA-Bot/issues/6828) ([00cba71](https://github.com/jaworldwideorg/OneJA-Bot/commit/00cba71))
+- **misc**: Fix anthropic max tokens, closes [#6859](https://github.com/lobehub/lobe-chat/issues/6859) ([35fbc6c](https://github.com/lobehub/lobe-chat/commit/35fbc6c))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 1.70.0](https://github.com/lobehub/lobe-chat/compare/v1.69.6...v1.70.0)
+
+<sup>Released on **2025-03-09**</sup>
+
+#### ✨ Features
+
+- **misc**: Support no-fc models like deepseek r1 with online search.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support no-fc models like deepseek r1 with online search, closes [#6842](https://github.com/lobehub/lobe-chat/issues/6842) ([f284c25](https://github.com/lobehub/lobe-chat/commit/f284c25))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.69.6](https://github.com/lobehub/lobe-chat/compare/v1.69.5...v1.69.6)
+
+<sup>Released on **2025-03-09**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix context cache control and model builtin search switch.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix context cache control and model builtin search switch, closes [#6831](https://github.com/lobehub/lobe-chat/issues/6831) ([5c6b8ea](https://github.com/lobehub/lobe-chat/commit/5c6b8ea))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.69.5](https://github.com/lobehub/lobe-chat/compare/v1.69.4...v1.69.5)
+
+<sup>Released on **2025-03-09**</sup>
+
+#### 💄 Styles
+
+- **chat**: Auto send message from URL.
+- **misc**: Support openrouter claude 3.7 sonnet reasoning.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
 
 #### Styles
 
-- **misc**: Add login ui for next-auth, closes [#6434](https://github.com/jaworldwideorg/OneJA-Bot/issues/6434) ([541f275](https://github.com/jaworldwideorg/OneJA-Bot/commit/541f275))
-- **misc**: Add Qwen QwQ model, closes [#6783](https://github.com/jaworldwideorg/OneJA-Bot/issues/6783) ([3d3c2ce](https://github.com/jaworldwideorg/OneJA-Bot/commit/3d3c2ce))
+- **chat**: Auto send message from URL, closes [#6497](https://github.com/lobehub/lobe-chat/issues/6497) ([30b2639](https://github.com/lobehub/lobe-chat/commit/30b2639))
+- **misc**: Support openrouter claude 3.7 sonnet reasoning, closes [#6806](https://github.com/lobehub/lobe-chat/issues/6806) ([f1ffc2c](https://github.com/lobehub/lobe-chat/commit/f1ffc2c))
 
 </details>
 
