@@ -18,9 +18,15 @@ declare global {
 
       NEXT_AUTH_DEBUG?: string;
 
+      //Auth0
       AUTH0_CLIENT_ID?: string;
       AUTH0_CLIENT_SECRET?: string;
       AUTH0_ISSUER?: string;
+
+      //Okta
+      OKTA_CLIENT_ID?: string;
+      OKTA_CLIENT_SECRET?: string;
+      OKTA_ISSUER?: string;
 
       // Github
       GITHUB_CLIENT_ID?: string;
@@ -59,6 +65,15 @@ export const getAuthConfig = () => {
   }
   if (process.env.AUTH0_ISSUER) {
     console.warn(removeTipsTemplate('AUTH0_ISSUER', 'AUTH_AUTH0_ISSUER'));
+  }
+  if (process.env.OKTA_CLIENT_ID) {
+    console.warn(removeTipsTemplate('OKTA_CLIENT_ID', 'AUTH_OKTA_CLIENT_ID'));
+  }
+  if (process.env.OKTA_CLIENT_SECRET) {
+    console.warn(removeTipsTemplate('OKTA_CLIENT_SECRET', 'AUTH_OKTA_CLIENT_SECRET'));
+  }
+  if (process.env.OKTA_ISSUER) {
+    console.warn(removeTipsTemplate('OKTA_CLIENT_ISSUER', 'AUTH_OKTA_CLIENT_ISSUER'));
   }
   if (process.env.AUTHENTIK_CLIENT_ID) {
     console.warn(removeTipsTemplate('AUTHENTIK_CLIENT_ID', 'AUTH_AUTHENTIK_ID'));
@@ -165,6 +180,11 @@ export const getAuthConfig = () => {
       AUTH0_CLIENT_SECRET: z.string().optional(),
       AUTH0_ISSUER: z.string().optional(),
 
+      // Okta
+      OKTA_CLIENT_ID: z.string().optional(),
+      OKTA_CLIENT_SECRET: z.string().optional(),
+      OKTA_ISSUER: z.string().optional(),
+
       // Github
       GITHUB_CLIENT_ID: z.string().optional(),
       GITHUB_CLIENT_SECRET: z.string().optional(),
@@ -226,6 +246,11 @@ export const getAuthConfig = () => {
       AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
       AUTH0_CLIENT_SECRET: process.env.AUTH0_CLIENT_SECRET,
       AUTH0_ISSUER: process.env.AUTH0_ISSUER,
+
+      // Okta
+      OKTA_CLIENT_ID: process.env.OKTA_CLIENT_ID,
+      OKTA_CLIENT_SECRET: process.env.OKTA_CLIENT_SECRET,
+      OKTA_ISSUER: process.env.OKTA_ISSUER,
 
       // Github
       GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
