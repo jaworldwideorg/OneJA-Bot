@@ -67,13 +67,13 @@ export const getAuthConfig = () => {
     console.warn(removeTipsTemplate('AUTH0_ISSUER', 'AUTH_AUTH0_ISSUER'));
   }
   if (process.env.OKTA_CLIENT_ID) {
-    console.warn(removeTipsTemplate('OKTA_CLIENT_ID', 'AUTH_OKTA_CLIENT_ID'));
+    console.warn(removeTipsTemplate('OKTA_CLIENT_ID', 'AUTH_OKTA_ID'));
   }
   if (process.env.OKTA_CLIENT_SECRET) {
-    console.warn(removeTipsTemplate('OKTA_CLIENT_SECRET', 'AUTH_OKTA_CLIENT_SECRET'));
+    console.warn(removeTipsTemplate('OKTA_CLIENT_SECRET', 'AUTH_OKTA_SECRET'));
   }
   if (process.env.OKTA_ISSUER) {
-    console.warn(removeTipsTemplate('OKTA_CLIENT_ISSUER', 'AUTH_OKTA_CLIENT_ISSUER'));
+    console.warn(removeTipsTemplate('OKTA_ISSUER', 'AUTH_OKTA_ISSUER'));
   }
   if (process.env.AUTHENTIK_CLIENT_ID) {
     console.warn(removeTipsTemplate('AUTHENTIK_CLIENT_ID', 'AUTH_AUTHENTIK_ID'));
