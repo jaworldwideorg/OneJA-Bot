@@ -88,7 +88,7 @@ const defaultMiddleware = (request: NextRequest) => {
 
   console.log(`[rewrite] ${url.pathname} -> ${nextURL}`);
 
-  url.pathname = nextPathname;
+  url.pathname = decodeURIComponent(nextPathname);
 
   return NextResponse.rewrite(url, { status: 200 });
 };
