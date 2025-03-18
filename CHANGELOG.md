@@ -2,6 +2,51 @@
 
 # Changelog
 
+## [Version 1.19.0](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.18.0...v1.19.0)
+
+<sup>Released on **2025-03-18**</sup>
+
+#### ✨ Features
+
+- **misc**: Support gemini image output in chat.
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix claude 3.5+ models context max output, fix google gemini output relative issue, fix knowledge base issue.
+
+#### 💄 Styles
+
+- **misc**: Support screenshot to clipboard when sharing, Update Vertex AI models, update Wenxin & Hunyuan model list.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support gemini image output in chat, closes [#6931](https://github.com/jaworldwideorg/OneJA-Bot/issues/6931) ([d4c0d1f](https://github.com/jaworldwideorg/OneJA-Bot/commit/d4c0d1f))
+
+#### What's fixed
+
+- **misc**: Fix claude 3.5+ models context max output, closes [#6984](https://github.com/jaworldwideorg/OneJA-Bot/issues/6984) ([da342dd](https://github.com/jaworldwideorg/OneJA-Bot/commit/da342dd))
+- **misc**: Fix google gemini output relative issue, closes [#6970](https://github.com/jaworldwideorg/OneJA-Bot/issues/6970) ([fdcaaf3](https://github.com/jaworldwideorg/OneJA-Bot/commit/fdcaaf3))
+- **misc**: Fix knowledge base issue, closes [#6973](https://github.com/jaworldwideorg/OneJA-Bot/issues/6973) ([15f39ef](https://github.com/jaworldwideorg/OneJA-Bot/commit/15f39ef))
+
+#### Styles
+
+- **misc**: Support screenshot to clipboard when sharing, closes [#6275](https://github.com/jaworldwideorg/OneJA-Bot/issues/6275) ([45663c3](https://github.com/jaworldwideorg/OneJA-Bot/commit/45663c3))
+- **misc**: Update Vertex AI models, closes [#6967](https://github.com/jaworldwideorg/OneJA-Bot/issues/6967) ([d4432f1](https://github.com/jaworldwideorg/OneJA-Bot/commit/d4432f1))
+- **misc**: Update Wenxin & Hunyuan model list, closes [#6995](https://github.com/jaworldwideorg/OneJA-Bot/issues/6995) ([d017f35](https://github.com/jaworldwideorg/OneJA-Bot/commit/d017f35))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.71.5](https://github.com/lobehub/lobe-chat/compare/v1.71.4...v1.71.5)
 
 <sup>Released on **2025-03-17**</sup>
