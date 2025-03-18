@@ -15,7 +15,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 
 const nextConfig: NextConfig = {
   assetPrefix: isProd && basePath ? `${basePath}/` : undefined, // Dynamically set asset prefix
-  basePath,
+  basePath: basePath || '', // Ensure proper paths
   compress: isProd,
   experimental: {
     optimizePackageImports: [
