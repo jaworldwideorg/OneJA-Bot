@@ -2,23 +2,146 @@
 
 # Changelog
 
-## [Version 1.18.0](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.17.1...v1.18.0)
+### [Version 1.71.5](https://github.com/lobehub/lobe-chat/compare/v1.71.4...v1.71.5)
 
-<sup>Released on **2025-03-13**</sup>
-
-#### ✨ Features
-
-- **misc**: Support no-fc models like deepseek r1 with online search.
-
-#### 🐛 Bug Fixes
-
-- **misc**: Fix anthropic max tokens, fix context cache control and model builtin search switch, fix crawl result for short content, fix theme flicking, Link jump in mobile terminal data statistics, refactor the theme implement, the agent setting `-edit_agent` not work, update cvpr cvf url rules.
+<sup>Released on **2025-03-17**</sup>
 
 #### 💄 Styles
 
-- **chat**: Auto send message from URL.
-- **spelling**: Correct "broswer" to "browser" across codebase.
-- **misc**: Support openrouter claude 3.7 sonnet reasoning, Support OpenRouter custom BaseURL.
+- **misc**: Support screenshot to clipboard when sharing.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Support screenshot to clipboard when sharing, closes [#6275](https://github.com/lobehub/lobe-chat/issues/6275) ([45663c3](https://github.com/lobehub/lobe-chat/commit/45663c3))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.71.4](https://github.com/lobehub/lobe-chat/compare/v1.71.3...v1.71.4)
+
+<sup>Released on **2025-03-17**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update Wenxin & Hunyuan model list.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update Wenxin & Hunyuan model list, closes [#6995](https://github.com/lobehub/lobe-chat/issues/6995) ([d017f35](https://github.com/lobehub/lobe-chat/commit/d017f35))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.71.3](https://github.com/lobehub/lobe-chat/compare/v1.71.2...v1.71.3)
+
+<sup>Released on **2025-03-15**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix claude 3.5+ models context max output.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix claude 3.5+ models context max output, closes [#6984](https://github.com/lobehub/lobe-chat/issues/6984) ([da342dd](https://github.com/lobehub/lobe-chat/commit/da342dd))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.71.2](https://github.com/lobehub/lobe-chat/compare/v1.71.1...v1.71.2)
+
+<sup>Released on **2025-03-15**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix knowledge base issue.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix knowledge base issue, closes [#6973](https://github.com/lobehub/lobe-chat/issues/6973) ([15f39ef](https://github.com/lobehub/lobe-chat/commit/15f39ef))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.71.1](https://github.com/lobehub/lobe-chat/compare/v1.71.0...v1.71.1)
+
+<sup>Released on **2025-03-15**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix google gemini output relative issue.
+
+#### 💄 Styles
+
+- **misc**: Update Vertex AI models.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix google gemini output relative issue, closes [#6970](https://github.com/lobehub/lobe-chat/issues/6970) ([fdcaaf3](https://github.com/lobehub/lobe-chat/commit/fdcaaf3))
+
+#### Styles
+
+- **misc**: Update Vertex AI models, closes [#6967](https://github.com/lobehub/lobe-chat/issues/6967) ([d4432f1](https://github.com/lobehub/lobe-chat/commit/d4432f1))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 1.71.0](https://github.com/lobehub/lobe-chat/compare/v1.70.11...v1.71.0)
+
+<sup>Released on **2025-03-14**</sup>
+
+#### ✨ Features
+
+- **misc**: Support gemini image output in chat.
 
 <br/>
 
@@ -27,25 +150,24 @@
 
 #### What's improved
 
-- **misc**: Support no-fc models like deepseek r1 with online search, closes [#6842](https://github.com/jaworldwideorg/OneJA-Bot/issues/6842) ([f284c25](https://github.com/jaworldwideorg/OneJA-Bot/commit/f284c25))
+- **misc**: Support gemini image output in chat, closes [#6931](https://github.com/lobehub/lobe-chat/issues/6931) ([d4c0d1f](https://github.com/lobehub/lobe-chat/commit/d4c0d1f))
 
-#### What's fixed
+</details>
 
-- **misc**: Fix anthropic max tokens, closes [#6859](https://github.com/jaworldwideorg/OneJA-Bot/issues/6859) ([35fbc6c](https://github.com/jaworldwideorg/OneJA-Bot/commit/35fbc6c))
-- **misc**: Fix context cache control and model builtin search switch, closes [#6831](https://github.com/jaworldwideorg/OneJA-Bot/issues/6831) ([5c6b8ea](https://github.com/jaworldwideorg/OneJA-Bot/commit/5c6b8ea))
-- **misc**: Fix crawl result for short content, closes [#6903](https://github.com/jaworldwideorg/OneJA-Bot/issues/6903) [#6904](https://github.com/jaworldwideorg/OneJA-Bot/issues/6904) ([d8fda65](https://github.com/jaworldwideorg/OneJA-Bot/commit/d8fda65))
-- **misc**: Fix theme flicking, closes [#6926](https://github.com/jaworldwideorg/OneJA-Bot/issues/6926) ([103c3e3](https://github.com/jaworldwideorg/OneJA-Bot/commit/103c3e3))
-- **misc**: Link jump in mobile terminal data statistics, closes [#6893](https://github.com/jaworldwideorg/OneJA-Bot/issues/6893) ([505d24d](https://github.com/jaworldwideorg/OneJA-Bot/commit/505d24d))
-- **misc**: Refactor the theme implement, closes [#6844](https://github.com/jaworldwideorg/OneJA-Bot/issues/6844) ([e5c2161](https://github.com/jaworldwideorg/OneJA-Bot/commit/e5c2161))
-- **misc**: The agent setting `-edit_agent` not work, closes [#4609](https://github.com/jaworldwideorg/OneJA-Bot/issues/4609) ([7af0ec6](https://github.com/jaworldwideorg/OneJA-Bot/commit/7af0ec6))
-- **misc**: Update cvpr cvf url rules, closes [#6860](https://github.com/jaworldwideorg/OneJA-Bot/issues/6860) ([c299067](https://github.com/jaworldwideorg/OneJA-Bot/commit/c299067))
+<div align="right">
 
-#### Styles
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
 
-- **chat**: Auto send message from URL, closes [#6497](https://github.com/jaworldwideorg/OneJA-Bot/issues/6497) ([30b2639](https://github.com/jaworldwideorg/OneJA-Bot/commit/30b2639))
-- **spelling**: Correct "broswer" to "browser" across codebase, closes [#6876](https://github.com/jaworldwideorg/OneJA-Bot/issues/6876) ([8d677a2](https://github.com/jaworldwideorg/OneJA-Bot/commit/8d677a2))
-- **misc**: Support openrouter claude 3.7 sonnet reasoning, closes [#6806](https://github.com/jaworldwideorg/OneJA-Bot/issues/6806) ([f1ffc2c](https://github.com/jaworldwideorg/OneJA-Bot/commit/f1ffc2c))
-- **misc**: Support OpenRouter custom BaseURL ([a8089ed](https://github.com/jaworldwideorg/OneJA-Bot/commit/a8089ed))
+</div>
+
+### [Version 1.70.11](https://github.com/lobehub/lobe-chat/compare/v1.70.10...v1.70.11)
+
+<sup>Released on **2025-03-13**</sup>
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
 
 </details>
 
