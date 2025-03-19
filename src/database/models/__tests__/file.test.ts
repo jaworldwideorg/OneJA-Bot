@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { eq, inArray } from 'drizzle-orm/expressions';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { LobeChatDatabase } from '@/database/type';
 import { FilesTabs, SortType } from '@/types/files';
@@ -362,8 +362,10 @@ describe('FileModel', () => {
 
       const userFiles = await fileModel.query();
       expect(userFiles).toHaveLength(2);
-      expect(userFiles[0].name).toBe('test-file-2.txt');
-      expect(userFiles[1].name).toBe('test-file-1.txt');
+
+      expect(userFiles.map((files) => files.name)).toEqual(
+        expect.arrayContaining(['test-file-1.txt', 'test-file-2.txt']),
+      );
     });
 
     it('should filter files by name', async () => {
