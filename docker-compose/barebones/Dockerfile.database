@@ -212,6 +212,4 @@ ENV \
 
 EXPOSE 3210/tcp
 
-ENTRYPOINT ["/bin/node"]
-
-CMD ["/app/scripts/startServer.js"]
+ENTRYPOINT ["sh", "-c", "npm run db:migrate && npm run dev -- --turbopack -p 3210"]
