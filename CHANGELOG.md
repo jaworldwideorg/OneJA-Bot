@@ -2,22 +2,22 @@
 
 # Changelog
 
-## [Version 1.20.0](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.19.0...v1.20.0)
+### [Version 1.72.1](https://github.com/lobehub/lobe-chat/compare/v1.72.0...v1.72.1)
 
-<sup>Released on **2025-03-18**</sup>
+<sup>Released on **2025-03-19**</sup>
 
-#### ✨ Features
+#### 🐛 Bug Fixes
 
-- **misc**: Update db schema to add `user_id` for data export.
+- **misc**: Allow historyCount to be set to 0.
 
 <br/>
 
 <details>
 <summary><kbd>Improvements and Fixes</kbd></summary>
 
-#### What's improved
+#### What's fixed
 
-- **misc**: Update db schema to add `user_id` for data export, closes [#7022](https://github.com/jaworldwideorg/OneJA-Bot/issues/7022) ([c35471a](https://github.com/jaworldwideorg/OneJA-Bot/commit/c35471a))
+- **misc**: Allow historyCount to be set to 0, closes [#7007](https://github.com/lobehub/lobe-chat/issues/7007) ([e863470](https://github.com/lobehub/lobe-chat/commit/e863470))
 
 </details>
 
