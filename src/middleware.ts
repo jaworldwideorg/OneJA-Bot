@@ -1,9 +1,7 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import { NextRequest, NextResponse } from 'next/server';
 import { UAParser } from 'ua-parser-js';
-import urlJoin from 'url-join';
 
-import { appEnv } from '@/config/app';
 import { authEnv } from '@/config/auth';
 import { LOBE_LOCALE_COOKIE } from '@/const/locale';
 import { LOBE_THEME_APPEARANCE } from '@/const/theme';
@@ -44,51 +42,37 @@ export const config = {
 const defaultMiddleware = (request: NextRequest) => {
   const url = new URL(request.url);
 
-  // skip all api requests
-  if (['/api', '/trpc', '/webapi'].some((path) => url.pathname.startsWith(path))) {
+  // Bypass middleware for static assets and API calls
+  if (
+    url.pathname.startsWith('/_next') || // Next.js static assets
+    ['/api', '/trpc', '/webapi'].some((path) => url.pathname.startsWith(path)) // API paths
+  ) {
     return NextResponse.next();
   }
 
-  // 1. 从 cookie 中读取用户偏好
-  const theme =
-    request.cookies.get(LOBE_THEME_APPEARANCE)?.value || parseDefaultThemeFromCountry(request);
-
-  // if it's a new user, there's no cookie
-  // So we need to use the fallback language parsed by accept-language
-  const browserLanguage = parseBrowserLanguage(request.headers);
-  const locale = (request.cookies.get(LOBE_LOCALE_COOKIE)?.value || browserLanguage) as Locales;
-
-  const ua = request.headers.get('user-agent');
-
-  const device = new UAParser(ua || '').getDevice();
-
-  // 2. 创建规范化的偏好值
-  const route = RouteVariants.serializeVariants({
-    isMobile: device.type === 'mobile',
-    locale,
-    theme,
-  });
-
-  // if app is in docker, rewrite to self container
-  // https://github.com/lobehub/lobe-chat/issues/5876
-  if (appEnv.MIDDLEWARE_REWRITE_THROUGH_LOCAL) {
-    url.protocol = 'http';
-    url.host = '127.0.0.1';
-    url.port = process.env.PORT || '3210';
+  // Decode only paths that are non-static and need processing
+  let decodedPathname;
+  try {
+    decodedPathname = decodeURIComponent(url.pathname);
+  } catch (error) {
+    console.error(`Failed to decode URL: ${url.pathname}`, error);
+    return NextResponse.error();
   }
 
-  // refs: https://github.com/lobehub/lobe-chat/pull/5866
-  // new handle segment rewrite: /${route}${originalPathname}
-  // / -> /zh-CN__0__dark
-  // /discover -> /zh-CN__0__dark/discover
-  const nextPathname = `/${route}` + (url.pathname === '/' ? '' : url.pathname);
-  const nextURL = appEnv.MIDDLEWARE_REWRITE_THROUGH_LOCAL
-    ? urlJoin(url.origin, nextPathname)
-    : nextPathname;
+  // Your route variant handling logic with decoded pathname
+  const route = RouteVariants.serializeVariants({
+    isMobile: new UAParser(request.headers.get('user-agent') || '').getDevice().type === 'mobile',
+    locale: (request.cookies.get(LOBE_LOCALE_COOKIE)?.value ||
+      parseBrowserLanguage(request.headers)) as Locales,
+    theme:
+      request.cookies.get(LOBE_THEME_APPEARANCE)?.value || parseDefaultThemeFromCountry(request),
+  });
 
-  console.log(`[rewrite] ${url.pathname} -> ${nextURL}`);
-
+  // Construct the new URL by encoding path segments again
+  const nextPathname = `/${route}${decodedPathname === '/' ? '' : decodedPathname}`;
   url.pathname = nextPathname;
+
+  console.log(`[rewrite] ${url.pathname} -> ${nextPathname}`);
 
   return NextResponse.rewrite(url, { status: 200 });
 };

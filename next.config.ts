@@ -14,7 +14,8 @@ const isUsePglite = process.env.NEXT_PUBLIC_CLIENT_DB === 'pglite';
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 
 const nextConfig: NextConfig = {
-  basePath,
+  assetPrefix: isProd && basePath ? `${basePath}/` : undefined, // Dynamically set asset prefix
+  basePath: basePath || '', // Ensure proper paths
   compress: isProd,
   experimental: {
     optimizePackageImports: [
@@ -27,6 +28,9 @@ const nextConfig: NextConfig = {
     ],
     webVitalsAttribution: ['CLS', 'LCP'],
     webpackMemoryOptimizations: true,
+  },
+  generateBuildId: async () => {
+    return `build-${Date.now()}`; // Append timestamp to ensure unique build IDs
   },
   async headers() {
     return [
@@ -101,6 +105,10 @@ const nextConfig: NextConfig = {
           },
         ],
         source: '/apple-touch-icon.png',
+      },
+      {
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+        source: '/_next/static/:path*',
       },
     ];
   },
@@ -189,8 +197,9 @@ const nextConfig: NextConfig = {
   // when external packages in dev mode with turbopack, this config will lead to bundle error
   serverExternalPackages: isProd ? ['@electric-sql/pglite'] : undefined,
 
-  transpilePackages: ['pdfjs-dist', 'mermaid'],
+  trailingSlash: true,
 
+  transpilePackages: ['pdfjs-dist', 'mermaid'],
   webpack(config) {
     config.experiments = {
       asyncWebAssembly: true,
