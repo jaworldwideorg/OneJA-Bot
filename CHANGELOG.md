@@ -2,6 +2,59 @@
 
 # Changelog
 
+## [Version&nbsp;1.101.0](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.100.2...v1.101.0)
+<sup>Released on **2025-07-21**</sup>
+
+
+#### ✨ Features
+
+- **misc**: Add image generation capabilities using Google AI Imagen API.
+
+
+#### 🐛 Bug Fixes
+
+- **groq**: Enable streaming for tool calls and add Kimi K2 model.
+
+
+#### 💄 Styles
+
+- **misc**: Modal list header sticky style.
+
+
+<br/>
+
+
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+
+
+#### What's improved
+
+* **misc**: Add image generation capabilities using Google AI Imagen API, closes [#8503](https://github.com/jaworldwideorg/OneJA-Bot/issues/8503) ([cef8208](https://github.com/jaworldwideorg/OneJA-Bot/commit/cef8208))
+
+
+
+#### What's fixed
+
+* **groq**: Enable streaming for tool calls and add Kimi K2 model, closes [#8510](https://github.com/jaworldwideorg/OneJA-Bot/issues/8510) ([60739bc](https://github.com/jaworldwideorg/OneJA-Bot/commit/60739bc))
+
+
+
+#### Styles
+
+* **misc**: Modal list header sticky style, closes [#8514](https://github.com/jaworldwideorg/OneJA-Bot/issues/8514) ([75273d5](https://github.com/jaworldwideorg/OneJA-Bot/commit/75273d5))
+
+</details>
+
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;1.100.2](https://github.com/jaworldwideorg/OneJA-Bot/compare/v1.100.1...v1.100.2)
 <sup>Released on **2025-07-21**</sup>
 
