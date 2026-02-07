@@ -1,5 +1,12 @@
 [
   {
+    "children": {
+      "fixes": ["Show notification when file upload fails due to storage plan limit."]
+    },
+    "date": "2026-02-07",
+    "version": "2.1.23"
+  },
+  {
     "children": {},
     "date": "2026-02-06",
     "version": "2.1.22"
