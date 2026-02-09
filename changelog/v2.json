@@ -1,6 +1,38 @@
 [
   {
     "children": {
+      "fixes": ["Show notification when file upload fails due to storage plan limit."]
+    },
+    "date": "2026-02-07",
+    "version": "2.1.23"
+  },
+  {
+    "children": {},
+    "date": "2026-02-06",
+    "version": "2.1.22"
+  },
+  {
+    "children": {
+      "improvements": ["Upgrade agents/group detail pages tabs、hidden like button."],
+      "fixes": ["Fixed in community pluings tab the lobehub skills not display."]
+    },
+    "date": "2026-02-06",
+    "version": "2.1.21"
+  },
+  {
+    "children": {},
+    "date": "2026-02-04",
+    "version": "2.1.20"
+  },
+  {
+    "children": {
+      "fixes": ["Add the preview publish to market button preview check."]
+    },
+    "date": "2026-02-04",
+    "version": "2.1.19"
+  },
+  {
+    "children": {
       "fixes": ["Add the preview publish to market button preview check."]
     },
     "date": "2026-02-04",

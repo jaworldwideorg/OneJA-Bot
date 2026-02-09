@@ -2,6 +2,149 @@
 
 # Changelog
 
+### [Version 2.1.23](https://github.com/jaworldwideorg/OneJA-Bot/compare/v2.1.22...v2.1.23)
+
+<sup>Released on **2026-02-07**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Show notification when file upload fails due to storage plan limit.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Show notification when file upload fails due to storage plan limit, closes [#12176](https://github.com/jaworldwideorg/OneJA-Bot/issues/12176) ([f26d0df](https://github.com/jaworldwideorg/OneJA-Bot/commit/f26d0df))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 2.1.22](https://github.com/jaworldwideorg/OneJA-Bot/compare/v2.1.21...v2.1.22)
+
+<sup>Released on **2026-02-06**</sup>
+
+#### 💄 Styles
+
+- **model-runtime**: Add Claude Opus 4.6 support for Bedrock runtime.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **model-runtime**: Add Claude Opus 4.6 support for Bedrock runtime, closes [#12155](https://github.com/jaworldwideorg/OneJA-Bot/issues/12155) ([90a75af](https://github.com/jaworldwideorg/OneJA-Bot/commit/90a75af))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 2.1.21](https://github.com/jaworldwideorg/OneJA-Bot/compare/v2.1.20...v2.1.21)
+
+<sup>Released on **2026-02-06**</sup>
+
+#### ♻ Code Refactoring
+
+- **docker-compose**: Restructure dev environment.
+- **misc**: Upgrade agents/group detail pages tabs、hidden like button.
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fixed in community pluings tab the lobehub skills not display.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **docker-compose**: Restructure dev environment, closes [#12132](https://github.com/jaworldwideorg/OneJA-Bot/issues/12132) ([7ba15cc](https://github.com/jaworldwideorg/OneJA-Bot/commit/7ba15cc))
+- **misc**: Upgrade agents/group detail pages tabs、hidden like button, closes [#12127](https://github.com/jaworldwideorg/OneJA-Bot/issues/12127) ([e402c51](https://github.com/jaworldwideorg/OneJA-Bot/commit/e402c51))
+
+#### What's fixed
+
+- **misc**: Fixed in community pluings tab the lobehub skills not display, closes [#12141](https://github.com/jaworldwideorg/OneJA-Bot/issues/12141) ([193c96f](https://github.com/jaworldwideorg/OneJA-Bot/commit/193c96f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 2.1.20](https://github.com/jaworldwideorg/OneJA-Bot/compare/v2.1.19...v2.1.20)
+
+<sup>Released on **2026-02-04**</sup>
+
+#### ♻ Code Refactoring
+
+- **model-runtime**: Extract Anthropic factory and convert Moonshot to RouterRuntime.
+
+#### 🐛 Bug Fixes
+
+- **model-runtime**: Fix moonshot interleaved thinking and circular dependency.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **model-runtime**: Extract Anthropic factory and convert Moonshot to RouterRuntime, closes [#12109](https://github.com/jaworldwideorg/OneJA-Bot/issues/12109) ([71064fd](https://github.com/jaworldwideorg/OneJA-Bot/commit/71064fd))
+
+#### What's fixed
+
+- **model-runtime**: Fix moonshot interleaved thinking and circular dependency, closes [#12112](https://github.com/jaworldwideorg/OneJA-Bot/issues/12112) ([3f1a198](https://github.com/jaworldwideorg/OneJA-Bot/commit/3f1a198))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 2.1.19](https://github.com/jaworldwideorg/OneJA-Bot/compare/v2.1.18...v2.1.19)
+
+<sup>Released on **2026-02-04**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Add the preview publish to market button preview check.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Add the preview publish to market button preview check, closes [#12105](https://github.com/jaworldwideorg/OneJA-Bot/issues/12105) ([28887c7](https://github.com/jaworldwideorg/OneJA-Bot/commit/28887c7))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 2.1.16](https://github.com/lobehub/lobe-chat/compare/v2.1.15...v2.1.16)
 
 <sup>Released on **2026-02-04**</sup>
