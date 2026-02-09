@@ -19,6 +19,7 @@ concurrency:
 jobs:
   release:
     name: Release
+    if: github.repository == 'lobehub/lobehub'
     runs-on: ubuntu-latest
 
     services:
