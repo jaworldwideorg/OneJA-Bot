@@ -37,11 +37,11 @@ const SignInPage = () => {
           loading={loading}
           oAuthSSOProviderLabels={oAuthSSOProviderLabels}
           oAuthSSOProviders={oAuthSSOProviders}
+          serverConfigInit={serverConfigInit}
+          socialLoading={socialLoading}
           onCheckUser={handleCheckUser}
           onSetPassword={handleForgotPassword}
           onSocialSignIn={handleSocialSignIn}
-          serverConfigInit={serverConfigInit}
-          socialLoading={socialLoading}
         />
       ) : (
         <SignInPasswordStep

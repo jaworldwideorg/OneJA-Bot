@@ -185,6 +185,14 @@ export default {
 
   'home.more': 'Discover More',
 
+  'home.recommendAgents': 'Recommended Agents',
+
+  'home.recommendEmpty': 'No recommendations available',
+
+  'home.recommendGroups': 'Recommended Groups',
+
+  'home.recommendWritingAgents': 'Writing Agents',
+
   'isClaimed': 'Claimed',
 
   'isFeatured': 'Featured',
@@ -261,6 +269,10 @@ export default {
   'mcp.categories.web-search.description': 'Web Search and Information Retrieval',
 
   'mcp.categories.web-search.name': 'Information Retrieval',
+
+  'mcp.details.agents.empty': 'No agents are using this skill yet',
+  'mcp.details.agents.networkError': 'Failed to load data. Check network and retry.',
+  'mcp.details.agents.title': 'Agents Using This Skill',
 
   'mcp.details.connectionType.hybrid.desc':
     'This service can run locally or in the cloud depending on configuration or usage scenario, offering dual operation capability.',
@@ -890,6 +902,18 @@ export default {
   'user.noForkedAgents': 'No forked Agents yet',
 
   'user.publishedAgents': 'Created Agents',
+
+  'user.publishedGroups': 'Created Groups',
+
+  'user.searchPlaceholder': 'Search by name or description...',
+
+  'user.statusFilter.all': 'All',
+  'user.statusFilter.archived': 'Archived',
+  'user.statusFilter.deprecated': 'Deprecated',
+  'user.statusFilter.favorite': 'Favorite',
+  'user.statusFilter.forked': 'Forked',
+  'user.statusFilter.published': 'Published',
+  'user.statusFilter.unpublished': 'Under Review',
 
   'user.tabs.favorites': 'Favorites',
 
