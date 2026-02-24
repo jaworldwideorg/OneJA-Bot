@@ -1,6 +1,7 @@
 'use client';
 
 import { AGENT_PROFILE_URL, DEFAULT_INBOX_AVATAR, INBOX_SESSION_ID } from '@lobechat/const';
+import { BRANDING_NAME } from '@lobechat/business-const';
 import type { AgentEvalRunStatus, EvalRunInputConfig } from '@lobechat/types';
 import { Accordion, AccordionItem, ActionIcon, Avatar, Flexbox } from '@lobehub/ui';
 import { App, Form, Input, InputNumber, Modal, Select, Space } from 'antd';
@@ -100,9 +101,9 @@ const RunEditModal = memo<RunEditModalProps>(({ open, onClose, run }) => {
     () => ({
       avatar: DEFAULT_INBOX_AVATAR,
       id: INBOX_SESSION_ID,
-      title: tChat('inbox.title'),
+      title: BRANDING_NAME,
     }),
-    [tChat],
+    [],
   );
 
   const allAgents = useMemo(() => [inboxAgent, ...agents], [inboxAgent, agents]);
