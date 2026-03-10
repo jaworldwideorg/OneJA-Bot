@@ -29,9 +29,10 @@ const styles = createStaticStyles(({ css }) => ({
     align-items: center;
     justify-content: center;
 
+    border-radius: 8px;
+
     opacity: 0;
     background: ${cssVar.colorBgMask};
-    border-radius: 8px;
 
     transition: opacity ${cssVar.motionDurationMid} ease;
   `,

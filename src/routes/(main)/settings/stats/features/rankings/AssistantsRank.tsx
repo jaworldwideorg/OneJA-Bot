@@ -1,5 +1,5 @@
-import { BarList } from '@lobehub/charts';
 import { BRANDING_NAME } from '@lobechat/business-const';
+import { BarList } from '@lobehub/charts';
 import { ActionIcon, Avatar, Modal } from '@lobehub/ui';
 import { MaximizeIcon } from 'lucide-react';
 import qs from 'query-string';

@@ -57,3 +57,15 @@ This file records the intentional fork-specific changes that should be preserved
 1. Start from latest `upstream/main`.
 2. Re-apply only the scopes listed above (plus any new explicitly requested additions).
 3. Validate diff against `upstream/main` to ensure no unrelated carry-over changes are included.
+
+## Latest Merge Notes (March 10, 2026)
+
+- `src/envs/auth.ts`: kept auth env interface ordering updates required by linting (`sort-interfaces`) while preserving fork-specific auth keys.
+- Branding scope files kept and import-sorted:
+  - `src/routes/(main)/eval/bench/[benchmarkId]/features/RunCreateModal/index.tsx`
+  - `src/routes/(main)/eval/bench/[benchmarkId]/features/RunEditModal/index.tsx`
+  - `src/routes/(main)/home/_layout/Body/Agent/List/InboxItem.tsx`
+  - `src/routes/(main)/settings/stats/features/rankings/AssistantsRank.tsx`
+- Branding test compatibility kept:
+  - `src/server/manifest.test.ts`
+  - `src/store/chat/slices/topic/selectors.test.ts` (selector API compatibility update for grouped topics assertions)

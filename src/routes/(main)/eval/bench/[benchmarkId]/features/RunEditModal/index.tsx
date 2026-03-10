@@ -1,7 +1,7 @@
 'use client';
 
-import { AGENT_PROFILE_URL, DEFAULT_INBOX_AVATAR, INBOX_SESSION_ID } from '@lobechat/const';
 import { BRANDING_NAME } from '@lobechat/business-const';
+import { AGENT_PROFILE_URL, DEFAULT_INBOX_AVATAR, INBOX_SESSION_ID } from '@lobechat/const';
 import type { AgentEvalRunStatus, EvalRunInputConfig } from '@lobechat/types';
 import { Accordion, AccordionItem, ActionIcon, Avatar, Flexbox } from '@lobehub/ui';
 import { App, Form, Input, InputNumber, Modal, Select, Space } from 'antd';

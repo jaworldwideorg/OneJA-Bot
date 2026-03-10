@@ -1,7 +1,7 @@
 'use client';
 
-import { DEFAULT_INBOX_AVATAR, SESSION_CHAT_URL } from '@lobechat/const';
 import { BRANDING_NAME } from '@lobechat/business-const';
+import { DEFAULT_INBOX_AVATAR, SESSION_CHAT_URL } from '@lobechat/const';
 import { Avatar } from '@lobehub/ui';
 import { type CSSProperties } from 'react';
 import { memo } from 'react';
