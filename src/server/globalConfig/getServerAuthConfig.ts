@@ -2,6 +2,7 @@ import { ENABLE_BUSINESS_FEATURES } from '@lobechat/business-const';
 
 import { appEnv } from '@/envs/app';
 import { authEnv } from '@/envs/auth';
+import { getBetterAuthSSOProviderLabels } from '@/libs/better-auth/sso';
 import { parseSSOProviders } from '@/libs/better-auth/utils/server';
 import { type GlobalServerConfig } from '@/types/serverConfig';
 
@@ -19,6 +20,7 @@ export const getServerAuthConfig = (): GlobalServerConfig => {
     enableMarketTrustedClient: !!(
       appEnv.MARKET_TRUSTED_CLIENT_SECRET && appEnv.MARKET_TRUSTED_CLIENT_ID
     ),
+    oAuthSSOProviderLabels: getBetterAuthSSOProviderLabels(),
     oAuthSSOProviders: getBetterAuthSSOProviders(),
     telemetry: {},
   };
