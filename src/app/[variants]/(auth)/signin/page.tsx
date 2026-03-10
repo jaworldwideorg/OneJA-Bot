@@ -19,6 +19,7 @@ const SignInPage = () => {
     handleSignIn,
     handleSocialSignIn,
     isSocialOnly,
+    lastAuthProvider,
     loading,
     oAuthSSOProviderLabels,
     oAuthSSOProviders,
@@ -34,6 +35,7 @@ const SignInPage = () => {
           disableEmailPassword={disableEmailPassword}
           form={form as any}
           isSocialOnly={isSocialOnly}
+          lastAuthProvider={lastAuthProvider}
           loading={loading}
           oAuthSSOProviderLabels={oAuthSSOProviderLabels}
           oAuthSSOProviders={oAuthSSOProviders}

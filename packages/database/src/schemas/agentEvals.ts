@@ -43,6 +43,7 @@ const evalModes = [
   'similar',
   'levenshtein',
   'rubric',
+  'external',
 ] as const;
 
 // ============================================
@@ -65,13 +66,16 @@ export const agentEvalBenchmarks = pgTable(
 
     metadata: jsonb('metadata').$type<Record<string, unknown>>(),
 
+    userId: text('user_id').references(() => users.id, { onDelete: 'cascade' }),
+
     isSystem: boolean('is_system').default(true).notNull(),
 
     ...timestamps,
   },
   (t) => [
-    uniqueIndex('agent_eval_benchmarks_identifier_unique').on(t.identifier),
+    uniqueIndex('agent_eval_benchmarks_identifier_user_id_unique').on(t.identifier, t.userId),
     index('agent_eval_benchmarks_is_system_idx').on(t.isSystem),
+    index('agent_eval_benchmarks_user_id_idx').on(t.userId),
   ],
 );
 
@@ -178,7 +182,7 @@ export const agentEvalRuns = pgTable(
     name: text('name'),
 
     status: text('status', {
-      enum: ['idle', 'pending', 'running', 'completed', 'failed', 'aborted'],
+      enum: ['idle', 'pending', 'running', 'completed', 'failed', 'aborted', 'external'],
     })
       .default('idle')
       .notNull(),
@@ -225,7 +229,7 @@ export const agentEvalRunTopics = pgTable(
       .notNull(),
 
     status: text('status', {
-      enum: ['pending', 'running', 'passed', 'failed', 'error', 'timeout'],
+      enum: ['pending', 'running', 'passed', 'failed', 'error', 'timeout', 'external', 'completed'],
     }),
 
     score: real('score'),

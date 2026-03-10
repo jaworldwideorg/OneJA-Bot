@@ -1,5 +1,4 @@
-/* eslint-disable sort-keys-fix/sort-keys-fix , typescript-sort-keys/interface */
-import { createEnv } from '@t3-oss/env-nextjs';
+import { createEnv } from '@t3-oss/env-core';
 import { z } from 'zod';
 
 declare global {
@@ -20,9 +19,9 @@ declare global {
       AUTH_GOOGLE_SECRET?: string;
       AUTH_GOOGLE_LABEL?: string;
 
+      AUTH_APPLE_APP_BUNDLE_IDENTIFIER?: string;
       AUTH_APPLE_CLIENT_ID?: string;
       AUTH_APPLE_CLIENT_SECRET?: string;
-      AUTH_APPLE_APP_BUNDLE_IDENTIFIER?: string;
       AUTH_APPLE_LABEL?: string;
 
       AUTH_GITHUB_ID?: string;
@@ -44,71 +43,61 @@ declare global {
       AUTH_MICROSOFT_LABEL?: string;
 
       AUTH_AUTH0_ID?: string;
-      AUTH_AUTH0_SECRET?: string;
       AUTH_AUTH0_ISSUER?: string;
       AUTH_AUTH0_LABEL?: string;
+      AUTH_AUTH0_SECRET?: string;
 
       AUTH_AUTHELIA_ID?: string;
-      AUTH_AUTHELIA_SECRET?: string;
       AUTH_AUTHELIA_ISSUER?: string;
       AUTH_AUTHELIA_LABEL?: string;
 
+      AUTH_AUTHELIA_SECRET?: string;
       AUTH_AUTHENTIK_ID?: string;
-      AUTH_AUTHENTIK_SECRET?: string;
       AUTH_AUTHENTIK_ISSUER?: string;
       AUTH_AUTHENTIK_LABEL?: string;
 
+      AUTH_AUTHENTIK_SECRET?: string;
       AUTH_CASDOOR_ID?: string;
-      AUTH_CASDOOR_SECRET?: string;
       AUTH_CASDOOR_ISSUER?: string;
       AUTH_CASDOOR_LABEL?: string;
+      AUTH_CASDOOR_SECRET?: string;
 
       AUTH_CLOUDFLARE_ZERO_TRUST_ID?: string;
-      AUTH_CLOUDFLARE_ZERO_TRUST_SECRET?: string;
       AUTH_CLOUDFLARE_ZERO_TRUST_ISSUER?: string;
       AUTH_CLOUDFLARE_ZERO_TRUST_LABEL?: string;
+      AUTH_CLOUDFLARE_ZERO_TRUST_SECRET?: string;
 
       AUTH_FEISHU_APP_ID?: string;
       AUTH_FEISHU_APP_SECRET?: string;
       AUTH_FEISHU_LABEL?: string;
 
       AUTH_GENERIC_OIDC_ID?: string;
-      AUTH_GENERIC_OIDC_SECRET?: string;
       AUTH_GENERIC_OIDC_ISSUER?: string;
       AUTH_GENERIC_OIDC_LABEL?: string;
-
+      AUTH_GENERIC_OIDC_SECRET?: string;
       AUTH_KEYCLOAK_ID?: string;
-      AUTH_KEYCLOAK_SECRET?: string;
       AUTH_KEYCLOAK_ISSUER?: string;
       AUTH_KEYCLOAK_LABEL?: string;
 
+      AUTH_KEYCLOAK_SECRET?: string;
       AUTH_LOGTO_ID?: string;
-      AUTH_LOGTO_SECRET?: string;
       AUTH_LOGTO_ISSUER?: string;
       AUTH_LOGTO_LABEL?: string;
+      AUTH_LOGTO_SECRET?: string;
 
       AUTH_OKTA_ID?: string;
-      AUTH_OKTA_SECRET?: string;
       AUTH_OKTA_ISSUER?: string;
       AUTH_OKTA_LABEL?: string;
+      AUTH_OKTA_SECRET?: string;
 
       AUTH_WECHAT_ID?: string;
       AUTH_WECHAT_SECRET?: string;
       AUTH_WECHAT_LABEL?: string;
 
       AUTH_ZITADEL_ID?: string;
-      AUTH_ZITADEL_SECRET?: string;
       AUTH_ZITADEL_ISSUER?: string;
       AUTH_ZITADEL_LABEL?: string;
-
-      // ===== JWKS Key ===== //
-      /**
-       * Generic JWKS key for signing/verifying JWTs.
-       * Used for internal service authentication and other cryptographic operations.
-       * Must be a JWKS JSON string containing an RS256 RSA key pair.
-       * Can be generated using `node scripts/generate-oidc-jwk.mjs`.
-       */
-      JWKS_KEY?: string;
+      AUTH_ZITADEL_SECRET?: string;
 
       /**
        * Internal JWT expiration time for lambda → async calls.
@@ -118,12 +107,22 @@ declare global {
        * @default '30s'
        */
       INTERNAL_JWT_EXPIRATION?: string;
+
+      // ===== JWKS Key ===== //
+      /**
+       * Generic JWKS key for signing/verifying JWTs.
+       * Used for internal service authentication and other cryptographic operations.
+       * Must be a JWKS JSON string containing an RS256 RSA key pair.
+       * Can be generated using `node scripts/generate-oidc-jwk.mjs`.
+       */
+      JWKS_KEY?: string;
     }
   }
 }
 
 export const getAuthConfig = () => {
   return createEnv({
+    clientPrefix: 'NEXT_PUBLIC_',
     client: {},
     server: {
       AUTH_SECRET: z.string().optional(),
