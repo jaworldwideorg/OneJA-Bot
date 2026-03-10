@@ -51,7 +51,10 @@ export const useSignIn = () => {
   });
   const serverConfigInit = useAuthServerConfigStore((s) => s.serverConfigInit);
   const oAuthSSOProviders = useAuthServerConfigStore((s) => s.serverConfig.oAuthSSOProviders) || [];
-  const { ssoProviders, preSocialSigninCheck, getAdditionalData } = useBusinessSignin();
+  const oAuthSSOProviderLabels =
+    useAuthServerConfigStore((s) => s.serverConfig.oAuthSSOProviderLabels) || {};
+  const { ssoProviders, ssoProviderLabels, preSocialSigninCheck, getAdditionalData } =
+    useBusinessSignin();
 
   useEffect(() => {
     const emailParam = searchParams.get('email');
@@ -278,6 +281,7 @@ export const useSignIn = () => {
     isSocialOnly,
     lastAuthProvider,
     loading,
+    oAuthSSOProviderLabels: ENABLE_BUSINESS_FEATURES ? ssoProviderLabels : oAuthSSOProviderLabels,
     oAuthSSOProviders: sortedProviders,
     serverConfigInit: ENABLE_BUSINESS_FEATURES ? true : serverConfigInit,
     socialLoading,

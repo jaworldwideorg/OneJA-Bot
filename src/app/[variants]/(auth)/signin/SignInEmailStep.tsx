@@ -29,6 +29,7 @@ export interface SignInEmailStepProps {
   isSocialOnly: boolean;
   lastAuthProvider?: string | null;
   loading: boolean;
+  oAuthSSOProviderLabels?: Record<string, string | undefined>;
   oAuthSSOProviders: string[];
   onCheckUser: (values: { email: string }) => Promise<void>;
   onSetPassword: () => void;
@@ -43,6 +44,7 @@ export const SignInEmailStep = ({
   isSocialOnly,
   lastAuthProvider,
   loading,
+  oAuthSSOProviderLabels,
   oAuthSSOProviders,
   serverConfigInit,
   socialLoading,
@@ -66,12 +68,18 @@ export const SignInEmailStep = ({
   );
 
   const getProviderLabel = (provider: string) => {
+    // Use custom label if provided
+    if (oAuthSSOProviderLabels?.[provider]) {
+      return `${t('betterAuth.signin.continueWith')} ${oAuthSSOProviderLabels[provider]}`;
+    }
+
+    // Fallback to i18n or default label generation
     const normalized = provider
       .toLowerCase()
       .replaceAll(/(^|[_-])([a-z])/g, (_, __, c) => c.toUpperCase());
     const normalizedKey = normalized.replaceAll(/[^\da-z]/gi, '');
     const key = `betterAuth.signin.continueWith${normalizedKey}`;
-    return t(key, { defaultValue: `Continue with ${normalized}` });
+    return t(key, { defaultValue: `${t('betterAuth.signin.continueWith')} ${normalized}` });
   };
 
   const footer = (

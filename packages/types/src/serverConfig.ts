@@ -63,6 +63,7 @@ export interface GlobalServerConfig {
   enableUploadFileToServer?: boolean;
   image?: PartialDeep<UserImageConfig>;
   memory?: GlobalMemoryConfig;
+  oAuthSSOProviderLabels?: Record<string, string | undefined>;
   oAuthSSOProviders?: string[];
   systemAgent?: PartialDeep<UserSystemAgentConfig>;
   telemetry: {

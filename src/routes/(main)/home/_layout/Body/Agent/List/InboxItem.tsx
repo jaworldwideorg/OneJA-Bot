@@ -1,6 +1,7 @@
 'use client';
 
 import { DEFAULT_INBOX_AVATAR, SESSION_CHAT_URL } from '@lobechat/const';
+import { BRANDING_NAME } from '@lobechat/business-const';
 import { Avatar } from '@lobehub/ui';
 import { type CSSProperties } from 'react';
 import { memo } from 'react';
@@ -21,7 +22,7 @@ const InboxItem = memo<InboxItemProps>(({ className, style }) => {
   const inboxAgentId = useAgentStore(builtinAgentSelectors.inboxAgentId);
 
   const isLoading = useChatStore(operationSelectors.isAgentRuntimeRunning);
-  const inboxAgentTitle = 'Lobe AI';
+  const inboxAgentTitle = BRANDING_NAME;
 
   return (
     <Link aria-label={inboxAgentTitle} to={SESSION_CHAT_URL(inboxAgentId, false)}>

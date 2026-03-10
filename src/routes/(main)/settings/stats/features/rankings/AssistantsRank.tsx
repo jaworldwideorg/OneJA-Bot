@@ -1,4 +1,5 @@
 import { BarList } from '@lobehub/charts';
+import { BRANDING_NAME } from '@lobechat/business-const';
 import { ActionIcon, Avatar, Modal } from '@lobehub/ui';
 import { MaximizeIcon } from 'lucide-react';
 import qs from 'query-string';
@@ -37,7 +38,7 @@ export const AssistantsRank = memo<{ mobile?: boolean }>(({ mobile }) => {
     return {
       icon: (
         <Avatar
-          alt={item.title || t('defaultAgent', { ns: 'chat' })}
+          alt={item.id === INBOX_SESSION_ID ? BRANDING_NAME : item.title || t('defaultAgent', { ns: 'chat' })}
           avatar={item.avatar || DEFAULT_AVATAR}
           background={item.backgroundColor || undefined}
           size={20}
@@ -46,11 +47,9 @@ export const AssistantsRank = memo<{ mobile?: boolean }>(({ mobile }) => {
       link,
       name: (
         <Link href={link} style={{ color: 'inherit' }}>
-          {item.title
-            ? item.id === INBOX_SESSION_ID
-              ? t('inbox.title', { ns: 'chat' })
-              : item.title
-            : t('defaultAgent', { ns: 'chat' })}
+          {item.id === INBOX_SESSION_ID
+            ? BRANDING_NAME
+            : item.title || t('defaultAgent', { ns: 'chat' })}
         </Link>
       ),
       value: item.count,
