@@ -131,6 +131,9 @@ export const getBetterAuthSSOProviderLabels = () => {
 
     const env = definition.checkEnvs();
     if (env && env.label) {
+      // Keep labels addressable by both configured provider key (including aliases)
+      // and canonical provider id.
+      providerLabels[rawProvider] = env.label;
       providerLabels[definition.id] = env.label;
     }
   }
