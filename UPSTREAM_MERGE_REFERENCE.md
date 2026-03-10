@@ -1,7 +1,5 @@
 # Upstream Merge Reference
 
-Last updated: March 10, 2026
-
 ## Purpose
 
 This file records the intentional fork-specific changes that should be preserved when syncing/merging from upstream.
@@ -12,6 +10,7 @@ This file records the intentional fork-specific changes that should be preserved
    - `src/app/[variants]/(auth)/signin/*`
    - `src/libs/better-auth/sso/**`
    - `src/envs/auth.ts`
+   - `src/server/globalConfig/getServerAuthConfig.ts`
    - `src/server/globalConfig/index.ts`
    - `src/store/serverConfig/selectors.ts`
    - `packages/types/src/serverConfig.ts`
@@ -19,7 +18,6 @@ This file records the intentional fork-specific changes that should be preserved
    - `locales/en-US/auth.json`
    - `locales/zh-CN/auth.json`
    - `docs/self-hosting/auth.mdx`
-   - Keep auth env interface ordering updates required by linting (`sort-interfaces`) while preserving fork-specific auth keys.
 
 2. Branding constant migration (`Lobe AI` -> `BRANDING_NAME`) and related UI usage:
    - `packages/business/const/src/branding.ts`
@@ -29,13 +27,13 @@ This file records the intentional fork-specific changes that should be preserved
    - `src/routes/(main)/home/_layout/Body/Agent/List/InboxItem.tsx`
    - `src/routes/(main)/settings/stats/features/rankings/AssistantsRank.tsx`
    - `src/routes/(mobile)/(home)/features/SessionListContent/Inbox/index.tsx`
-   - Keep these files import-sorted when resolving merge conflicts.
 
 3. Branding-related test compatibility updates:
    - `src/server/manifest.test.ts`
    - `src/server/metadata.test.ts`
    - `src/store/chat/slices/topic/selectors.test.ts`
-   - Preserve selector API compatibility updates for grouped topic assertions.
+   - `src/server/globalConfig/getServerAuthConfig.test.ts`
+   - `src/libs/better-auth/sso/index.test.ts`
 
 4. Repository-specific workflow and CI customizations:
    - `.github/actions/desktop-publish-s3/action.yml`
@@ -57,7 +55,6 @@ This file records the intentional fork-specific changes that should be preserved
 
 6. Database migration compatibility for managed PostgreSQL providers:
    - `packages/database/migrations/0090_enable_pg_search.sql`
-   - Keep the guarded `pg_search` extension creation (`DO $$ ... $$`) so migration no-ops on providers where `pg_search` is unavailable (for example, Azure Database for PostgreSQL Flexible Server).
 
 ## Notes For Future Merge Sessions
 
