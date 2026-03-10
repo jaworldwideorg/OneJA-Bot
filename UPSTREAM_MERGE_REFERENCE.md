@@ -19,6 +19,7 @@ This file records the intentional fork-specific changes that should be preserved
    - `locales/en-US/auth.json`
    - `locales/zh-CN/auth.json`
    - `docs/self-hosting/auth.mdx`
+   - Keep auth env interface ordering updates required by linting (`sort-interfaces`) while preserving fork-specific auth keys.
 
 2. Branding constant migration (`Lobe AI` -> `BRANDING_NAME`) and related UI usage:
    - `packages/business/const/src/branding.ts`
@@ -28,11 +29,13 @@ This file records the intentional fork-specific changes that should be preserved
    - `src/routes/(main)/home/_layout/Body/Agent/List/InboxItem.tsx`
    - `src/routes/(main)/settings/stats/features/rankings/AssistantsRank.tsx`
    - `src/routes/(mobile)/(home)/features/SessionListContent/Inbox/index.tsx`
+   - Keep these files import-sorted when resolving merge conflicts.
 
 3. Branding-related test compatibility updates:
    - `src/server/manifest.test.ts`
    - `src/server/metadata.test.ts`
    - `src/store/chat/slices/topic/selectors.test.ts`
+   - Preserve selector API compatibility updates for grouped topic assertions.
 
 4. Repository-specific workflow and CI customizations:
    - `.github/actions/desktop-publish-s3/action.yml`
@@ -52,20 +55,12 @@ This file records the intentional fork-specific changes that should be preserved
    - `public/icons/icon-512x512.maskable.png`
    - `public/icons/icon-512x512.png`
 
+6. Database migration compatibility for managed PostgreSQL providers:
+   - `packages/database/migrations/0090_enable_pg_search.sql`
+   - Keep the guarded `pg_search` extension creation (`DO $$ ... $$`) so migration no-ops on providers where `pg_search` is unavailable (for example, Azure Database for PostgreSQL Flexible Server).
+
 ## Notes For Future Merge Sessions
 
 1. Start from latest `upstream/main`.
 2. Re-apply only the scopes listed above (plus any new explicitly requested additions).
 3. Validate diff against `upstream/main` to ensure no unrelated carry-over changes are included.
-
-## Latest Merge Notes (March 10, 2026)
-
-- `src/envs/auth.ts`: kept auth env interface ordering updates required by linting (`sort-interfaces`) while preserving fork-specific auth keys.
-- Branding scope files kept and import-sorted:
-  - `src/routes/(main)/eval/bench/[benchmarkId]/features/RunCreateModal/index.tsx`
-  - `src/routes/(main)/eval/bench/[benchmarkId]/features/RunEditModal/index.tsx`
-  - `src/routes/(main)/home/_layout/Body/Agent/List/InboxItem.tsx`
-  - `src/routes/(main)/settings/stats/features/rankings/AssistantsRank.tsx`
-- Branding test compatibility kept:
-  - `src/server/manifest.test.ts`
-  - `src/store/chat/slices/topic/selectors.test.ts` (selector API compatibility update for grouped topics assertions)
